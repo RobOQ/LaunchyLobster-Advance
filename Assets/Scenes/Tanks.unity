@@ -85,48 +85,6 @@ NavMeshSettings:
     cellSize: .166666672
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &605830873
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 410932, guid: 8b063e9da2601c1459c4be24b19823ea, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 410932, guid: 8b063e9da2601c1459c4be24b19823ea, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 410932, guid: 8b063e9da2601c1459c4be24b19823ea, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 410932, guid: 8b063e9da2601c1459c4be24b19823ea, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 410932, guid: 8b063e9da2601c1459c4be24b19823ea, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 410932, guid: 8b063e9da2601c1459c4be24b19823ea, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 410932, guid: 8b063e9da2601c1459c4be24b19823ea, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 410932, guid: 8b063e9da2601c1459c4be24b19823ea, type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 8b063e9da2601c1459c4be24b19823ea, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1194852366
 GameObject:
   m_ObjectHideFlags: 0
@@ -187,6 +145,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!1 &1456716425
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1456716426}
+  - 114: {fileID: 1456716427}
+  m_Layer: 0
+  m_Name: TankSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1456716426
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1456716425}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+--- !u!114 &1456716427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1456716425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fae86272b088adc45a407baf2c4b219b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NumberOfTanks: 5
+  TankPrefab: {fileID: 162214, guid: 8b063e9da2601c1459c4be24b19823ea, type: 2}
+  TankColors:
+  - {r: 0, g: .647058845, b: .111561894, a: 0}
+  - {r: .91911763, g: 0, b: 0, a: 0}
+  - {r: .199999809, g: 0, b: 1, a: 0}
+  - {r: 0, g: .83448267, b: 1, a: 0}
+  - {r: .903448343, g: 1, b: 0, a: 0}
 --- !u!1 &2123905112
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,7 +273,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2123905112}
   m_LocalRotation: {x: .274918258, y: 0, z: 0, w: .961467683}
-  m_LocalPosition: {x: 0, y: 9.52999973, z: -11.75}
+  m_LocalPosition: {x: 0, y: 11.04, z: -16.6599998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
