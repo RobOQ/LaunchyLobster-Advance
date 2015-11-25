@@ -184,7 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fae86272b088adc45a407baf2c4b219b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NumberOfTanks: 5
+  NumberOfTanks: 8
   TankPrefab: {fileID: 162214, guid: 8b063e9da2601c1459c4be24b19823ea, type: 2}
   TankColors:
   - {r: 0, g: .647058845, b: .111561894, a: 0}

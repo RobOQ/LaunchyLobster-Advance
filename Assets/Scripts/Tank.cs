@@ -27,7 +27,15 @@ public class Tank : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            TankHood.transform.Rotate(new Vector3(0.0f, 1.0f, 0.0f));
+        }
 
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            TankHood.transform.Rotate(new Vector3(0.0f, -1.0f, 0.0f));
+        }
     }
 
     public void SetColor(Color color)
