@@ -6,6 +6,8 @@ public class TankSpawner : MonoBehaviour
     public int NumberOfTanks;
     public GameObject TankPrefab;
 
+    public TurnManager TurnManager;
+
     public Color[] TankColors;
 
     Tank[] tanks;
@@ -40,6 +42,7 @@ public class TankSpawner : MonoBehaviour
             }
 
             tanks[i] = newTank;
+            TurnManager.RegisterPlayer(newTank);
         }
     }
 

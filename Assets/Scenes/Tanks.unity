@@ -85,6 +85,45 @@ NavMeshSettings:
     cellSize: .166666672
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &857652045
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 857652047}
+  - 114: {fileID: 857652046}
+  m_Layer: 0
+  m_Name: TurnManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &857652046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 857652045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 865895c3702deb141893c5d04b81f743, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &857652047
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 857652045}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
 --- !u!1 &1194852366
 GameObject:
   m_ObjectHideFlags: 0
@@ -186,6 +225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NumberOfTanks: 8
   TankPrefab: {fileID: 162214, guid: 8b063e9da2601c1459c4be24b19823ea, type: 2}
+  TurnManager: {fileID: 857652046}
   TankColors:
   - {r: 0, g: .647058845, b: .111561894, a: 0}
   - {r: .91911763, g: 0, b: 0, a: 0}
