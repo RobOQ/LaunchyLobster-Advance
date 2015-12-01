@@ -112,6 +112,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 865895c3702deb141893c5d04b81f743, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CameraOffset: {x: 3, y: 2, z: 0}
+  CameraRelativeRotation: {x: 0, y: -90, z: 0}
 --- !u!4 &857652047
 Transform:
   m_ObjectHideFlags: 0
