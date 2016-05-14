@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class Tank : MonoBehaviour
 {
@@ -9,6 +8,9 @@ public class Tank : MonoBehaviour
     public GameObject UnmovableYAxis;
 
     public GameObject GunFirePrefab;
+    public GameObject CannonBallPrefab;
+
+    public float CannonPower;
 
     Vector3 GunFireOffset = new Vector3(0.0f, 1.31f, 0.0f);
     Vector3 GunFireRotation = new Vector3(270.0f, 0.0f, 0.0f);
@@ -36,18 +38,6 @@ public class Tank : MonoBehaviour
         gunFireParticleSystem = gunfireParticleObject.GetComponent<ParticleSystem>();
     }
 
-    // Use this for initialization
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void SetColor(Color color)
     {
         tankBodyRenderer.material.color = color;
@@ -73,8 +63,15 @@ public class Tank : MonoBehaviour
         TankHood.transform.localRotation = Quaternion.AngleAxis(resultingZ, new Vector3(0.0f, 0.0f, 1.0f));
     }
 
-    public void FireGun()
+    public GameObject FireGun()
     {
         gunFireParticleSystem.Play();
+
+        GameObject cannonBall = Instantiate(CannonBallPrefab);
+        cannonBall.transform.position = gunfireParticleObject.transform.position;
+
+        cannonBall.GetComponent<Rigidbody>().AddForce((cannonBall.transform.position - TankHood.transform.position).normalized * CannonPower, ForceMode.Impulse);
+
+        return cannonBall;
     }
 }

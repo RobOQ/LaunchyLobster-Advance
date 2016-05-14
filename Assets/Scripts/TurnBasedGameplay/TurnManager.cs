@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 public class TurnManager : MonoBehaviour
 {
-    List<Tank> tanks;
-
-    int turnIndex;
-
-    bool hasGameStarted;
-
     public Vector3 CameraOffset;
     public Vector3 CameraRelativeRotation;
+
+    List<Tank> tanks;
+    int turnIndex;
+    bool hasGameStarted;
+    TurnStateMachine turnStateMachine;
 
     void Awake()
     {
         hasGameStarted = false;
         tanks = new List<Tank>();
         turnIndex = 0;
+        turnStateMachine = new TurnStateMachine();
     }
 
     public void RegisterPlayer(Tank tank)
@@ -32,14 +32,10 @@ public class TurnManager : MonoBehaviour
             hasGameStarted = true;
         }
 
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
+        bool turnOver = turnStateMachine.Update(tanks[turnIndex]);
 
-        tanks[turnIndex].TurnTurret(horizontal, vertical);
-
-        if (Input.GetButtonDown("FireCannon"))
+        if (turnOver)
         {
-            tanks[turnIndex].FireGun();
             turnIndex = (turnIndex + 1) % tanks.Count;
             StartTurn(turnIndex);
         }
@@ -50,5 +46,6 @@ public class TurnManager : MonoBehaviour
         Camera.main.transform.SetParent(tanks[tankIndex].UnmovableYAxis.transform);
         Camera.main.transform.localPosition = CameraOffset;
         Camera.main.transform.localRotation = Quaternion.Euler(CameraRelativeRotation);
+        turnStateMachine.ChangeStateImmediate(TurnState.State.WaitingForShot);
     }
 }
