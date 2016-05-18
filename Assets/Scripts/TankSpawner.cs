@@ -58,7 +58,7 @@ public class TankSpawner : MonoBehaviour
         {
             while (Vector3.Distance(position, tanks[existingTankIndex].transform.position) < 1.5f)
             {
-                position = new Vector3(Random.Range(-10.0f, 10.0f), 0.0f, Random.Range(-10.0f, 10.0f));
+                position = new Vector3(Random.Range(-10.0f, 10.0f), 0.1f, Random.Range(-10.0f, 10.0f));
                 existingTankIndex = 0;
             }
         }

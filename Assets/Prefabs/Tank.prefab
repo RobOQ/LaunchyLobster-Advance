@@ -9,9 +9,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 486286}
   - 33: {fileID: 3312474}
-  - 135: {fileID: 13534402}
   - 23: {fileID: 2394962}
-  m_Layer: 0
+  - 135: {fileID: 13554116}
+  m_Layer: 8
   m_Name: TankHood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,9 +27,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 410134}
   - 33: {fileID: 3300418}
-  - 136: {fileID: 13674258}
   - 23: {fileID: 2300172}
-  m_Layer: 0
+  - 136: {fileID: 13636266}
+  m_Layer: 8
   m_Name: TankGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,8 +45,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 410932}
   - 114: {fileID: 11433172}
-  - 54: {fileID: 5485036}
-  m_Layer: 0
+  - 54: {fileID: 5461636}
+  m_Layer: 8
   m_Name: Tank
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61,7 +61,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 456112}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: UnmovableYAxis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77,9 +77,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 494286}
   - 33: {fileID: 3345002}
-  - 65: {fileID: 6550222}
   - 23: {fileID: 2300614}
-  m_Layer: 0
+  - 65: {fileID: 6561174}
+  m_Layer: 8
   m_Name: TankBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -249,7 +249,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 184874}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &5485036
+--- !u!54 &5461636
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -264,7 +264,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &6550222
+--- !u!65 &6561174
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -294,7 +294,7 @@ MonoBehaviour:
   GunFirePrefab: {fileID: 184314, guid: b4a7a8d96c9df8b4e93645daa086568c, type: 2}
   CannonBallPrefab: {fileID: 189784, guid: 2b0e5ffd18d340e4e95ed8eb4f579a09, type: 2}
   CannonPower: 10
---- !u!135 &13534402
+--- !u!135 &13554116
 SphereCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -306,7 +306,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &13674258
+--- !u!136 &13636266
 CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -315,10 +315,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
+  m_Radius: 0.5000002
   m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0.00000005960463, y: 1.0587912e-22, z: -0.00000008940698}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

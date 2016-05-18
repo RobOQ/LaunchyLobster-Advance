@@ -22,7 +22,7 @@ public class ShotFiredState : TurnState {
 
     public override void RegisterProjectile(Projectile projectile)
     {
-        projectile.onImpact += () =>
+        projectile.onImpact += (pos) =>
         {
             machine.ChangeStateDeferred(State.ShotImpacted);
         };

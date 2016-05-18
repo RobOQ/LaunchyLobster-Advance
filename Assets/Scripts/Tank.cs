@@ -24,6 +24,20 @@ public class Tank : MonoBehaviour
     GameObject gunfireParticleObject;
     ParticleSystem gunFireParticleSystem;
 
+    int health;
+
+    public int Health
+    {
+        get
+        {
+            return health;
+        }
+        set
+        {
+            health = value;
+        }
+    }
+
     void Awake()
     {
         tankBodyRenderer = TankBody.GetComponent<MeshRenderer>();

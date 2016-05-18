@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public delegate void ImpactHandler();
+public delegate void ImpactHandler(Vector3 impactPos);
 
 public class Projectile : MonoBehaviour
 {
@@ -32,7 +32,21 @@ public class Projectile : MonoBehaviour
     {
         if (onImpact != null)
         {
-            onImpact();
+            onImpact(position);
+        }
+
+        int layerMask = ~0;
+        Collider[] hitColliders = Physics.OverlapSphere(position, 5.0f, layerMask);
+
+        foreach (Collider hit in hitColliders)
+        {
+            Rigidbody rb = hit.GetComponentInParent<Rigidbody>();
+
+            if (rb != null)
+            {
+                rb.AddExplosionForce(50.0f, position, 5.0f, 3.0f);
+
+            }
         }
 
         Instantiate(explosionPrefab, position, rotation);
